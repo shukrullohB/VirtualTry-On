@@ -1,5 +1,5 @@
-VirtualFit — AI-Powered Virtual Clothing Try-On
 
+ede
 🎯 Project Overview
 This project focuses on AI-based Virtual Try-On, where a user can upload a photo of a person and a piece of clothing, and the system will generate a new image showing how the person would look wearing that clothing.
 We will use pretrained models like VITON-HD / TryOnDiffusion, so the system works even without training from scratch.
