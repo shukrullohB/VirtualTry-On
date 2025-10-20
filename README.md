@@ -5,11 +5,11 @@ This project focuses on AI-based Virtual Try-On, where a user can upload a photo
 We will use pretrained models like VITON-HD / TryOnDiffusion, so the system works even without training from scratch.
 The goal is to demonstrate how computer vision can be used in e-commerce and fashion technology.
 
-| Name                     | Student ID | Role                                 |
-| ------------------------ | ---------- | ------------------------------------ |
-| **Shukrullo Baxtiyorov** | 220411     | Model setup & code execution         |
-| **Akmaljon P.**          | 220484     | Image collection & result validation |
-| **Sirojiddin Kh.**          | 220673     | Image collection & result validation |
+| Name                     | Student ID | 
+| ------------------------ | ---------- | 
+| **Shukrullo Baxtiyorov** | 220411     | 
+| **Akmaljon P.**          | 220484     | 
+| **Sirojiddin Kh.**          | 220673     | 
 
 Objectives
 
