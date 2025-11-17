@@ -17,9 +17,9 @@ This file tracks our weekly progress and tasks for the **Virtual Try-On via 3D H
 
 | Week | Task | Responsible | Status |
 |------|------|------------|--------|
-| **Week 1** | Team setup, topic confirmation, GitHub repo initialization | All members | 🟢 Done / 🔄 In Progress |
+| **Week 1** | Team setup, topic confirmation, GitHub repo initialization | All members | 🟢 Done |
 | **Week 2** | Collect person & clothing sample images | **Akmaljon** | 🟢 Done |
-| **Week 3** | Set up Google Colab and run first try-on test (inference) | **Shukrullo** | ⏳ Pending |
+| **Week 3** | Set up Google Colab and run first try-on test (inference) | **Shukrullo** | 🔄 In Progress |
 | **Week 4** | Organize outputs and save Before/After image pairs | **Sirojiddin** | ⏳ Pending |
 | **Week 5** | Add more samples and push results to GitHub | **Akmaljon + Sirojiddin** | ⏳ Pending |
 | **Week 6** | Finalize outputs and prepare demo image list | **Shukrullo** | ⏳ Pending |
