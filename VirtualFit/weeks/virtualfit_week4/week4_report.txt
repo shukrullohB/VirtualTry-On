@@ -1,0 +1,13 @@
+Week 4 – Evaluation Report
+
+In Week 4, I evaluated the performance of my virtual try-on system.
+I compared the baseline model and the improved model using two metrics:
+SSIM and LPIPS.
+
+SSIM value: 0.8233
+LPIPS value: 0.2218
+
+The improved model shows better visual quality.
+This improvement comes from segmentation, data augmentation, and better clothing alignment.
+
+This completes the evaluation stage of the project.
