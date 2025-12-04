@@ -1,0 +1,15 @@
+Week 3 – Improved Model Report
+
+In Week 3 I improved my virtual try-on model. 
+First, I added segmentation using rembg so the system can separate the person from the background. 
+Then, I added data augmentation for the clothing brightness change, contrast change, and rotation. 
+These improvements helped the clothes look more natural on the person.
+
+I also compared the baseline model and the improved model. 
+The improved version gives a more realistic result and fits the clothing better.
+
+Metrics
+- SSIM shows the structural difference between baseline and improved.
+- LPIPS shows the visual difference based on human perception.
+
+Overall, the improved model works better and produces more realistic virtual try-on images.
