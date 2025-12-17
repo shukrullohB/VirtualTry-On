@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VirtualFit | CAU AI Project</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        /* --- GLOBAL VARIABLES --- */
+        :root {
+            --primary-color: #6366f1; /* Indigo */
+            --secondary-color: #a855f7; /* Purple */
+            --bg-color: #0f172a; /* Dark Slate */
+            --card-bg: rgba(255, 255, 255, 0.05);
+            --text-color: #f8fafc;
+            --glass-border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* --- RESET & BASIC SETUP --- */
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.15) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(168, 85, 247, 0.15) 0px, transparent 50%);
+            color: var(--text-color);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* --- HEADER --- */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(12px);
+            border-bottom: var(--glass-border);
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            background: linear-gradient(90deg, #fff, #a855f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.5px;
+        }
+
+        .project-tag {
+            font-size: 13px;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 6px 16px;
+            border-radius: 20px;
+            color: #cbd5e1;
+            border: var(--glass-border);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* --- HERO SECTION --- */
+        .main-content {
+            padding-top: 120px; /* Header space */
+            padding-bottom: 60px;
+            text-align: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #818cf8 0%, #d8b4fe 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p.subtitle {
+            font-size: 1.25rem;
+            color: #94a3b8;
+            max-width: 600px;
+            margin: 0 auto 50px auto;
+            line-height: 1.6;
+        }
+
+        /* --- APP CONTAINER (The "MacBook" Look) --- */
+        .app-wrapper {
+            width: 90%;
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #1e293b;
+            border-radius: 16px;
+            box-shadow: 
+                0 25px 50px -12px rgba(0, 0, 0, 0.5),
+                0 0 0 1px rgba(255, 255, 255, 0.1);
+            overflow: hidden;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        /* Browser Window Controls (Red/Yellow/Green dots) */
+        .window-bar {
+            height: 36px;
+            background: #0f172a;
+            display: flex;
+            align-items: center;
+            padding-left: 16px;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+        .red { background-color: #ef4444; }
+        .yellow { background-color: #eab308; }
+        .green { background-color: #22c55e; }
+
+        .iframe-container {
+            width: 100%;
+            height: 800px; /* Height of the app */
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            background-color: #0f172a;
+        }
+
+        /* --- TEAM SECTION --- */
+        .team-section {
+            margin-top: 100px;
+            padding: 0 20px;
+        }
+
+        .team-section h2 {
+            font-size: 2rem;
+            margin-bottom: 40px;
+            color: #f8fafc;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            justify-content: center;
+        }
+
+        .member-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border: var(--glass-border);
+            padding: 30px;
+            border-radius: 16px;
+            text-align: left;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .member-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.15);
+            border-color: rgba(99, 102, 241, 0.3);
+        }
+
+        .member-role {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #818cf8;
+            font-weight: 700;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .member-name {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin: 0 0 4px 0;
+            color: white;
+        }
+
+        .member-id {
+            font-size: 0.9rem;
+            color: #94a3b8;
+            font-family: monospace;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            margin-top: 80px;
+            padding: 40px;
+            text-align: center;
+            border-top: var(--glass-border);
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+
+        /* --- ANIMATION --- */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            .header { padding: 15px 20px; }
+            .app-wrapper { width: 95%; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">VirtualFit</div>
+        <div class="project-tag">Central Asian University (CAU)</div>
+    </header>
+
+    <div class="main-content">
+        <h1>Your Personal <br><span class="gradient-text">AI Fitting Room</span></h1>
+        <p class="subtitle">Experience the future of fashion. Upload your photo and try on any outfit instantly using our advanced AI technology.</p>
+
+        <div class="app-wrapper">
+            <div class="window-bar">
+                <div class="dot red"></div>
+                <div class="dot yellow"></div>
+                <div class="dot green"></div>
+            </div>
+            
+            <div class="iframe-container">
+                <iframe 
+                    src="https://4c0be3173a019d5e57.gradio.live" 
+                    allow="camera; microphone; clipboard-read; clipboard-write;" 
+                    title="VirtualFit App">
+                </iframe>
+            </div>
+        </div>
+
+        <div class="team-section">
+            <h2>Meet the CAU Creators</h2>
+            <div class="team-grid">
+                
+                <div class="member-card">
+                    <span class="member-role">Data & Frontend</span>
+                    <h3 class="member-name">Shukrullo Baxtiyorov</h3>
+                    <div class="member-id">ID: 220411</div>
+                </div>
+
+                <div class="member-card">
+                    <span class="member-role">Backend & AI Model</span>
+                    <h3 class="member-name">Akmaljon Polatjonov</h3>
+                    <div class="member-id">ID: 220484</div>
+                </div>
+
+                <div class="member-card">
+                    <span class="member-role">Quality & Docs</span>
+                    <h3 class="member-name">Sirojiddin Khaydarov</h3>
+                    <div class="member-id">ID: 220673</div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 VirtualFit Project. Proudly built at <b>Central Asian University (CAU)</b>.</p>
+    </footer>
+
+</body>
+</html>
