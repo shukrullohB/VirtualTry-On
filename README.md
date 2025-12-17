@@ -35,7 +35,10 @@ VirtualFit is a virtual try-on application that allows users to upload a photo o
 Here is a comparison of our output:
 | Original Person | Target Cloth | Virtual Try-On Result |
 |:---:|:---:|:---:|
-| ![Person]("C:\Users\Akmaljon\OneDrive\Рабочий стол\test_img\Person.png") | ![Cloth]("C:\Users\Akmaljon\OneDrive\Рабочий стол\test_img\Clothe.png") | ![Result]("C:\Users\Akmaljon\OneDrive\Рабочий стол\test_img\Result.png") |
+| ![Person]()<img width="459" height="389" alt="Person" src="https://github.com/user-attachments/assets/12687edc-5c38-49d6-bfc2-b252f0a5ca42" />
+| ![Cloth]<img width="441" height="381" alt="Clothe" src="https://github.com/user-attachments/assets/d1ea3aa3-1357-4994-9489-e7af3a26d7cd" />
+| ![Result]<img width="429" height="575" alt="Result" src="https://github.com/user-attachments/assets/450ee9d7-5fe9-4b2b-af7a-0a80a81568b6" />
+
 
 ## 📜 References
 * [cite_start]VITON-HD Dataset [cite: 34]
