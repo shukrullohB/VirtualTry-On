@@ -1,25 +1,43 @@
+# 👕 VirtualFit: AI-Powered Virtual Try-On
 
-VirtualFit — AI-Powered Virtual Clothing Try-On
+**Central Asian University (CAU)** *Computer Vision Final Project*
 
-🎯 Project Overview
-This project focuses on AI-based Virtual Try-On, where a user can upload a photo of a person and a piece of clothing, and the system will generate a new image showing how the person would look wearing that clothing.
-We will use pretrained models like VITON-HD / TryOnDiffusion, so the system works even without training from scratch.
-The goal is to demonstrate how computer vision can be used in e-commerce and fashion technology.
+![Banner](assets/result_example.png)
 
-| Name                     | Student ID | 
-| ------------------------ | ---------- | 
-| **Shukrullo Baxtiyorov** | 220411     | 
-| **Akmaljon P.**          | 220484     | 
-| **Sirojiddin Kh.**          | 220673     | 
+## 📌 Project Overview
+VirtualFit is a virtual try-on application that allows users to upload a photo of themselves and a garment to realistically visualize how it looks on their body. [cite_start]By leveraging the **IDM-VTON** model and a custom **HTML/Gradio** interface, we aim to solve the problem of online return rates and enhance the e-commerce experience[cite: 13, 14, 24].
 
-Objectives
+## 👥 Team Members (VirtualFit)
+* [cite_start]**Shukrullo Baxtiyorov** (ID: 220411) - Backend & AI Model Implementation [cite: 6, 7]
+* [cite_start]**Akmaljon Polatjonov** (ID: 220484) - Data Preparation & Frontend [cite: 8]
+* [cite_start]**Sirojiddin Khaydarov** (ID: 220673) - Testing, Documentation & QA [cite: 9]
 
-Use ready-made AI models (VITON-HD / TryOnDiffusion) to generate try-on images.
+## 🚀 Key Features
+* **Photorealistic Try-On:** Uses advanced diffusion models for texture preservation.
+* **Auto-Masking:** Automatically detects body and clothing shapes.
+* **User-Friendly Interface:** Modern web UI with Dark Mode support.
+* **Google Colab Integration:** Runs on free GPU resources via Gradio tunneling.
 
-Test the model on custom images or fashion dataset.
+## 🛠️ Tech Stack
+* **Model:** IDM-VTON (Diffusion-based Inpainting)
+* **Backend:** Python, PyTorch, Diffusers, Gradio
+* **Frontend:** HTML5, CSS3 (Glassmorphism Design)
+* **Platform:** Google Colab (T4 GPU)
 
-Produce Before vs After visuals to show clothing transfer effect.
+## 💻 How to Run
+1. Open the notebook in `notebooks/VirtualFit_Inference.ipynb` via Google Colab.
+2. Run all cells to install dependencies and start the Gradio server.
+3. Copy the public link (e.g., `https://xxxx.gradio.live`).
+4. Open `web/index.html` on your local machine.
+5. Paste the link into the code (or use the direct Gradio interface).
 
-Evaluate results visually and through image similarity metrics (SSIM, LPIPS).
+## 📊 Results
+Here is a comparison of our output:
+| Original Person | Target Cloth | Virtual Try-On Result |
+|:---:|:---:|:---:|
+| ![Person](path/to/person.jpg) | ![Cloth](path/to/cloth.jpg) | ![Result](path/to/result.png) |
 
-Present the project as a real use case for online clothing stores.
+## 📜 References
+* [cite_start]VITON-HD Dataset [cite: 34]
+* IDM-VTON Paper & Repository
+* [cite_start]VirtualFit Proposal [cite: 2]
