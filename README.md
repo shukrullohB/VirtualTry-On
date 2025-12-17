@@ -27,9 +27,8 @@ VirtualFit is a virtual try-on application that allows users to upload a photo o
 ## 💻 How to Run
 1. Open the notebook in `notebooks/VirtualFit_Inference.ipynb` via Google Colab.
 2. Run all cells to install dependencies and start the Gradio server.
-3. Copy the public link (e.g., `https://xxxx.gradio.live`).
-4. Open `web/index.html` on your local machine.
-5. Paste the link into the code (or use the direct Gradio interface).
+3. Open `web/index.html` on your local machine.
+4. Paste the link into the code (or use the direct Gradio interface).
 
 ## 📊 Results
 Here is a comparison of our output:
@@ -54,6 +53,8 @@ Here is the visual comparison showing the original inputs and the final virtual 
 Watch the workflow below to see how the VirtualFit application works in real-time:
 
 ![Demo Walkthrough](assets/demo.gif)
+
+*
 
 
 
