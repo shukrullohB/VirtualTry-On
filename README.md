@@ -10,7 +10,7 @@ VirtualFit is a virtual try-on application that allows users to upload a photo o
 ## 👥 Team Members (VirtualFit)
 * [cite_start]**Shukrullo Baxtiyorov** (ID: 220411) - Backend & AI Model Implementation [cite: 6, 7]
 * [cite_start]**Akmaljon Polatjonov** (ID: 220484) - Data Preparation & Frontend [cite: 8]
-* [cite_start]**Sirojiddin Khaydarov** (ID: 220673) - Testing, Documentation & QA [cite: 9]
+
 
 ## 🚀 Key Features
 * **Photorealistic Try-On:** Uses advanced diffusion models for texture preservation.
